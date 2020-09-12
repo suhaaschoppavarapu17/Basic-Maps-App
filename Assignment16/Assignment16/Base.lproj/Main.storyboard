@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="42b-fA-h1z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="764"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="26C-rQ-AKR"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xc5-5D-uRh">
+                                <rect key="frame" x="0.0" y="808" width="414" height="88"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="f8y-qQ-IYQ">
+                                        <rect key="frame" x="20" y="20" width="374" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoM-6k-X2E">
+                                                <rect key="frame" x="0.0" y="0.0" width="162" height="48"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="Z30-k1-rdE"/>
+                                                </constraints>
+                                                <state key="normal" title="Previous">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="previousButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="omA-0d-pop"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trP-HA-4V9">
+                                                <rect key="frame" x="212" y="0.0" width="162" height="48"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bWB-0d-iwr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="f8y-qQ-IYQ" firstAttribute="leading" secondItem="xc5-5D-uRh" secondAttribute="leading" constant="20" id="Ds1-jv-IxZ"/>
+                                    <constraint firstItem="f8y-qQ-IYQ" firstAttribute="top" secondItem="xc5-5D-uRh" secondAttribute="top" constant="20" id="HTP-O9-vvc"/>
+                                    <constraint firstAttribute="trailing" secondItem="f8y-qQ-IYQ" secondAttribute="trailing" constant="20" id="vPa-IL-7eb"/>
+                                    <constraint firstAttribute="bottom" secondItem="f8y-qQ-IYQ" secondAttribute="bottom" constant="20" id="xxd-a0-zKj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xc5-5D-uRh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Nh-ih-LQh"/>
+                            <constraint firstItem="42b-fA-h1z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9wX-Jc-79O"/>
+                            <constraint firstItem="xc5-5D-uRh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G3D-cJ-dOe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xc5-5D-uRh" secondAttribute="trailing" id="Me1-Pp-ne8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="42b-fA-h1z" secondAttribute="trailing" id="RQl-dZ-NrW"/>
+                            <constraint firstItem="42b-fA-h1z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b0r-bX-bIb"/>
+                            <constraint firstAttribute="bottom" secondItem="xc5-5D-uRh" secondAttribute="bottom" id="uIW-vz-51t"/>
+                            <constraint firstItem="xc5-5D-uRh" firstAttribute="top" secondItem="42b-fA-h1z" secondAttribute="bottom" id="wEQ-8K-46t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="42b-fA-h1z" id="FDK-dR-zlU"/>
+                        <outlet property="nextButton" destination="trP-HA-4V9" id="JM4-Hr-vRw"/>
+                        <outlet property="previousButton" destination="yoM-6k-X2E" id="IbT-IJ-aos"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
